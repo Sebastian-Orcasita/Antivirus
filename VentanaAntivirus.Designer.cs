@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            botonBuscar = new Button();
             label1 = new Label();
             textBoxRuta = new TextBox();
             textBoxBytes = new TextBox();
-            button2 = new Button();
+            botonAnalizar = new Button();
             labelVirus = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // botonBuscar
             // 
-            button1.Location = new Point(466, 100);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            botonBuscar.Location = new Point(466, 100);
+            botonBuscar.Name = "botonBuscar";
+            botonBuscar.Size = new Size(112, 34);
+            botonBuscar.TabIndex = 0;
+            botonBuscar.Text = "Buscar";
+            botonBuscar.UseVisualStyleBackColor = true;
+            botonBuscar.Click += button1_Click;
             // 
             // label1
             // 
@@ -74,14 +74,15 @@
             textBoxBytes.Size = new Size(371, 246);
             textBoxBytes.TabIndex = 3;
             // 
-            // button2
+            // botonAnalizar
             // 
-            button2.Location = new Point(466, 170);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 4;
-            button2.Text = "Analizar";
-            button2.UseVisualStyleBackColor = true;
+            botonAnalizar.Location = new Point(466, 170);
+            botonAnalizar.Name = "botonAnalizar";
+            botonAnalizar.Size = new Size(112, 34);
+            botonAnalizar.TabIndex = 4;
+            botonAnalizar.Text = "Analizar";
+            botonAnalizar.UseVisualStyleBackColor = true;
+            botonAnalizar.Click += button2_Click;
             // 
             // labelVirus
             // 
@@ -129,11 +130,11 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(labelVirus);
-            Controls.Add(button2);
+            Controls.Add(botonAnalizar);
             Controls.Add(textBoxBytes);
             Controls.Add(textBoxRuta);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(botonBuscar);
             Name = "VentanaAntivirus";
             Text = "My Antivirus";
             Load += Form1_Load;
@@ -143,11 +144,11 @@
 
         #endregion
 
-        private Button button1;
+        private Button botonBuscar;
         private Label label1;
         private TextBox textBoxRuta;
         private TextBox textBoxBytes;
-        private Button button2;
+        private Button botonAnalizar;
         private Label labelVirus;
         private Label label2;
         private TextBox textBox1;

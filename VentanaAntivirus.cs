@@ -4,6 +4,7 @@ namespace Antivirus
 {
     public partial class VentanaAntivirus : Form
     {
+        private byte[] bytes;
         public VentanaAntivirus()
         {
             InitializeComponent();
@@ -20,12 +21,12 @@ namespace Antivirus
             explorador.ShowDialog(this);
 
             AdminArchivos myAdmin = new AdminArchivos(explorador.FileName);
-            byte [] bytes = myAdmin.leerBytes();
+            bytes = myAdmin.leerBytes();
 
             //Cadena que almacena los bytes que se envian desde el administrador
             string contenidoBytes = "";
 
-            for (int i = 0; i< bytes.Length; i++)
+            for (int i = 0; i < bytes.Length; i++)
             {
 
                 contenidoBytes += " " + bytes[i];
@@ -34,6 +35,13 @@ namespace Antivirus
 
             textBoxBytes.Text = contenidoBytes;
             textBoxRuta.Text = explorador.FileName;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Analizador myAnalizador = new Analizador();
+            myAnalizador.buscarVirus(bytes);
 
         }
     }

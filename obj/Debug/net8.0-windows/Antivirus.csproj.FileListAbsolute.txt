@@ -14,3 +14,4 @@ C:\Users\LENOVO\OneDrive\Documentos\Antivirus\Antivirus\obj\Debug\net8.0-windows
 C:\Users\LENOVO\OneDrive\Documentos\Antivirus\Antivirus\obj\Debug\net8.0-windows\Antivirus.pdb
 C:\Users\LENOVO\OneDrive\Documentos\Antivirus\Antivirus\obj\Debug\net8.0-windows\Antivirus.genruntimeconfig.cache
 C:\Users\LENOVO\OneDrive\Documentos\Antivirus\Antivirus\obj\Debug\net8.0-windows\ref\Antivirus.dll
+C:\Users\LENOVO\OneDrive\Documentos\Antivirus\Antivirus\obj\Debug\net8.0-windows\Antivirus.sourcelink.json
