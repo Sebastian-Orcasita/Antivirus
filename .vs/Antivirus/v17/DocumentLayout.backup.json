@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{AF578474-96FF-4849-8E1A-7981E48544D3}|Antivirus.csproj|solutionrelative:ventanaantivirus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AF578474-96FF-4849-8E1A-7981E48544D3}|Antivirus.csproj|c:\\users\\lenovo\\onedrive\\documentos\\antivirus\\antivirus\\adminarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF578474-96FF-4849-8E1A-7981E48544D3}|Antivirus.csproj|solutionrelative:adminarchivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AF578474-96FF-4849-8E1A-7981E48544D3}|Antivirus.csproj|c:\\users\\lenovo\\onedrive\\documentos\\antivirus\\antivirus\\virus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF578474-96FF-4849-8E1A-7981E48544D3}|Antivirus.csproj|solutionrelative:virus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Virus.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\Virus.cs",
+              "RelativeDocumentMoniker": "Virus.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\Virus.cs",
+              "RelativeToolTip": "Virus.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T18:32:00.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminArchivos.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\AdminArchivos.cs",
+              "RelativeDocumentMoniker": "AdminArchivos.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\AdminArchivos.cs",
+              "RelativeToolTip": "AdminArchivos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T18:16:10.366Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -36,7 +66,7 @@
               "RelativeDocumentMoniker": "VentanaAntivirus.cs",
               "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\VentanaAntivirus.cs",
               "RelativeToolTip": "VentanaAntivirus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T18:04:28.253Z",
               "EditorCaption": ""
@@ -49,27 +79,14 @@
               "RelativeDocumentMoniker": "Analizador.cs",
               "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\Analizador.cs",
               "RelativeToolTip": "Analizador.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA1wCMAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwCsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T18:05:37.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Virus.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\Virus.cs",
-              "RelativeDocumentMoniker": "Virus.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\Virus.cs",
-              "RelativeToolTip": "Virus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T18:05:16.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "VentanaAntivirus.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\OneDrive\\Documentos\\Antivirus\\Antivirus\\VentanaAntivirus.cs",
               "RelativeDocumentMoniker": "VentanaAntivirus.cs",

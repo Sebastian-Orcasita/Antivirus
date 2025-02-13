@@ -40,8 +40,13 @@ namespace Antivirus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Analizador myAnalizador = new Analizador();
-            myAnalizador.buscarVirus(bytes);
+            Analizador myAnalizador = new Analizador(bytes);
+            textBoxEstado.Text = myAnalizador.buscarVirus();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -10,51 +10,158 @@ namespace Antivirus
     internal class Analizador
     {
         //Declaración
-        private Virus[] ListaVirus;
-        private byte[] data;
+        private Virus[] ListaVirus = null;
+        private byte[] data = null;
 
         //Constructor
-        public Analizador() {
+        public Analizador(byte[] bytesArchivo) {
 
+            //Recibe los bytes del archivo seleccionado por el usuario
+            data = bytesArchivo;
+
+            //Crea la lista de virus que se van a buscar en el archivo
             crearListaVirus();
         
         }
 
-        //Metodo donde se implementa el automata
-        public void buscarVirus(byte[] bytesArchivo)
+        //Metodo donde se implementa el automata finito
+        public string buscarVirus()
         {
 
-            data = bytesArchivo;
+            int contadorVirusUSAMA = 0;
+            int contadorVirusAMTRAX = 0;
+            int contadorVirusEBOLA = 0;
+            int contadorVirusAH1N1 = 0;
+            int contadorVirusCOVID = 0;
+
             string estado = "q0";
-            //Recorremos el vector de bytes
+            
+            //Recorremos el vector de bytes del archivo seleccionado una sola vez
             for (int i = 0; i < data.Length; i++)
             {
 
-                //USAMA
-                if(data[i] == ListaVirus[0].getSecuencia()[0])
+                //Buscar USAMA
+                if (data[i] == ListaVirus[0].getSecuencia()[0])
                 {
+
                     estado = "q1";
 
                     if(data[i + 1] == ListaVirus[0].getSecuencia()[1])
                     {
-                        estado = "q2";
+                        estado = "q7";
 
                         if (data[i +2] == ListaVirus[0].getSecuencia()[2])
                         {
-                            estado = "q3";
+                            estado = "q8";
 
                             if (data[i + 3] == ListaVirus[0].getSecuencia()[3]) 
                             {
-                                estado = "q4";
-                                //USAMA
-                                Console.WriteLine(estado + " USAMA");
+                                estado = "q9";
+                                contadorVirusUSAMA++;
                             }
                         }
                     }
 
-                } 
+                }
+
+                //Buscar ÉBOLA
+                if (data[i] == ListaVirus[1].getSecuencia()[0])
+                {
+
+                    estado = "q3";
+
+                    if (data[i + 1] == ListaVirus[1].getSecuencia()[1])
+                    {
+                        estado = "q15";
+
+                        if (data[i + 2] == ListaVirus[1].getSecuencia()[2])
+                        {
+                            estado = "q14";
+
+                            if (data[i + 3] == ListaVirus[1].getSecuencia()[3])
+                            {
+                                estado = "q16";
+                                contadorVirusEBOLA++;
+                            }
+                        }
+                    }
+
+                }
+
+                //Buscara AMTRAX
+                if (data[i] == ListaVirus[2].getSecuencia()[0])
+                {
+
+                    estado = "q2";
+
+                    if (data[i + 1] == ListaVirus[2].getSecuencia()[1])
+                    {
+                        estado = "q5";
+
+                        if (data[i + 2] == ListaVirus[2].getSecuencia()[2])
+                        {
+                            estado = "q10";
+
+                            if (data[i + 3] == ListaVirus[2].getSecuencia()[3])
+                            {
+                                estado = "q11";
+                                contadorVirusAMTRAX++;
+                            }
+                        }
+                    }
+
+                }
+
+                //Buscar AH1N1
+                if (data[i] == ListaVirus[3].getSecuencia()[0])
+                {
+
+                    estado = "q2";
+
+                    if (data[i + 1] == ListaVirus[3].getSecuencia()[1])
+                    {
+                        estado = "q6";
+
+                        if (data[i + 2] == ListaVirus[3].getSecuencia()[2])
+                        {
+                            estado = "q12";
+
+                            if (data[i + 3] == ListaVirus[3].getSecuencia()[3])
+                            {
+                                estado = "q13";
+                                contadorVirusAH1N1++;
+                            }
+                        }
+                    }
+
+                }
+
+                //Buscar COVID
+                if (data[i] == ListaVirus[4].getSecuencia()[0])
+                {
+
+                    estado = "q4";
+
+                    if (data[i + 1] == ListaVirus[4].getSecuencia()[1])
+                    {
+                        estado = "q17";
+
+                        if (data[i + 2] == ListaVirus[4].getSecuencia()[2])
+                        {
+                            estado = "q18";
+
+                            if (data[i + 3] == ListaVirus[4].getSecuencia()[3])
+                            {
+                                estado = "q19";
+                                contadorVirusCOVID++;
+                            }
+                        }
+                    }
+
+                }
 
             }
+            return estado;
         }
 
         private void crearListaVirus() {
@@ -63,11 +170,11 @@ namespace Antivirus
             ListaVirus = new Virus[5];
 
             //Crean la instancia de la clase VIRUS para cada uno de los elementos
-            Virus usama = new Virus("USAMA", new byte[] { 15, 30, 15, 49 });
-            Virus ebola = new Virus("Ébola", new byte[] { 15, 30, 15, 49 });
-            Virus amtrax = new Virus("Amtrax", new byte[] { 15, 30, 15, 49 });
-            Virus ah1n1 = new Virus("AH1N1", new byte[] { 15, 30, 15, 49 });
-            Virus covid = new Virus("Covid 19", new byte[] { 15, 30, 15, 49 });
+            Virus usama = new Virus("USAMA", new byte[] { 10, 0, 0, 0 });
+            Virus ebola = new Virus("Ébola", new byte[] { 29, 32, 53, 29 });
+            Virus amtrax = new Virus("Amtrax", new byte[] { 72, 72, 15, 29 });
+            Virus ah1n1 = new Virus("AH1N1", new byte[] { 72, 32, 32, 20 });
+            Virus covid = new Virus("Covid 19", new byte[] { 30, 25, 20, 19 });
 
             //Almacenando los virus en una lista
             ListaVirus[0] = usama;
@@ -76,8 +183,6 @@ namespace Antivirus
             ListaVirus[3] = ah1n1;
             ListaVirus[4] = covid;
 
-
         }
-
     }
 }
