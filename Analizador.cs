@@ -13,6 +13,13 @@ namespace Antivirus
         private Virus[] ListaVirus = null;
         private byte[] data = null;
 
+        //Contadores
+        int contadorVirusUSAMA = 0;
+        int contadorVirusAMTRAX = 0;
+        int contadorVirusEBOLA = 0;
+        int contadorVirusAH1N1 = 0;
+        int contadorVirusCOVID = 0;
+
         //Constructor
         public Analizador(byte[] bytesArchivo) {
 
@@ -28,16 +35,12 @@ namespace Antivirus
         public string buscarVirus()
         {
 
-            int contadorVirusUSAMA = 0;
-            int contadorVirusAMTRAX = 0;
-            int contadorVirusEBOLA = 0;
-            int contadorVirusAH1N1 = 0;
-            int contadorVirusCOVID = 0;
+           
 
             string estado = "q0";
             
             //Recorremos el vector de bytes del archivo seleccionado una sola vez
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < data.Length-3; i++)
             {
 
                 //Buscar USAMA
@@ -50,7 +53,7 @@ namespace Antivirus
                     {
                         estado = "q7";
 
-                        if (data[i +2] == ListaVirus[0].getSecuencia()[2])
+                        if (data[i + 2] == ListaVirus[0].getSecuencia()[2])
                         {
                             estado = "q8";
 
@@ -169,8 +172,9 @@ namespace Antivirus
             //Inicializando
             ListaVirus = new Virus[5];
 
+
             //Crean la instancia de la clase VIRUS para cada uno de los elementos
-            Virus usama = new Virus("USAMA", new byte[] { 10, 0, 0, 0 });
+            Virus usama = new Virus("USAMA", new byte[] { 115, 116, 114, 117 });
             Virus ebola = new Virus("Ébola", new byte[] { 29, 32, 53, 29 });
             Virus amtrax = new Virus("Amtrax", new byte[] { 72, 72, 15, 29 });
             Virus ah1n1 = new Virus("AH1N1", new byte[] { 72, 32, 32, 20 });
@@ -182,6 +186,40 @@ namespace Antivirus
             ListaVirus[2] = amtrax;
             ListaVirus[3] = ah1n1;
             ListaVirus[4] = covid;
+
+        }
+
+        public int getCountUsama() {
+
+            return contadorVirusUSAMA;
+
+        }
+
+        public int getCountAMTRAX()
+        {
+
+            return contadorVirusAMTRAX;
+
+        }
+
+        public int getCountEBOLA()
+        {
+
+            return contadorVirusEBOLA;
+
+        }
+
+        public int getCountAH1N1()
+        {
+
+            return contadorVirusAH1N1;
+
+        }
+
+        public int getCountCOVID()
+        {
+
+            return contadorVirusCOVID;
 
         }
     }

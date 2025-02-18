@@ -15,7 +15,7 @@ namespace Antivirus
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
             OpenFileDialog explorador = new OpenFileDialog();
             explorador.ShowDialog(this);
@@ -36,13 +36,34 @@ namespace Antivirus
             textBoxBytes.Text = contenidoBytes;
             textBoxRuta.Text = explorador.FileName;
 
+            textBoxResultado.Text = "";
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAnalizar_Click(object sender, EventArgs e)
         {
-            Analizador myAnalizador = new Analizador(bytes);
-            textBoxEstado.Text = myAnalizador.buscarVirus();
+            if (bytes != null)
+            {
+       
+                Analizador myAnalizador = new Analizador(bytes);
+                textBoxEstado.Text = myAnalizador.buscarVirus();
 
+                textBoxResultado.Text = "Usama: " + myAnalizador.getCountUsama() + Environment.NewLine +
+                                        "Ébola: " + myAnalizador.getCountEBOLA() + Environment.NewLine +
+                                        "AH1N1: " + myAnalizador.getCountAH1N1() + Environment.NewLine +
+                                        "Amtrax: " + myAnalizador.getCountAMTRAX() + Environment.NewLine +
+                                        "Covid: " + myAnalizador.getCountCOVID();
+
+
+            }
+
+            else {
+
+                MessageBox.Show("Tienes que seleccionar un archivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
